@@ -7,14 +7,13 @@ from django.utils import timezone
 class Estudiante(models.Model):
     #user = models.ForeignKey(User, on_delete = models.SET(-1))
     name = models.CharField(max_length=100, null=False)
-    lastname = models.CharField(max_length=100, null=False)
-    age = models.IntegerField(null=False)
-    gender = models.CharField(max_length=100, null=False) #Genero
-    address = models.CharField(max_length = 250, null = False) 
-    enrollment = models.IntegerField(null=False) #Matricula   
+    edad = models.IntegerField(null=False)
+    sexo = models.CharField(max_length=100, null=False)
+    dirección = models.CharField(max_length = 250, null = False) 
+    matrícula = models.IntegerField(null=False)
     subject = models.CharField(max_length=100, null=False)
-    phoneNumber = models.IntegerField(null=False)
-    birthday = models.DateField(default = timezone.now)
+    númerotelefónico = models.IntegerField(null=False)
+    fechanacimiento = models.DateField(default = timezone.now)
     delete = models.BooleanField(default = False)
     created = models.DateTimeField(default = timezone.now)
     edited = models.DateTimeField(blank=True, null=True, default=None)
