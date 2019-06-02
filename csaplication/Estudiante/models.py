@@ -13,7 +13,7 @@ class Estudiante(models.Model):
     direccion = models.CharField(max_length = 250, null = False) 
     matricula = models.IntegerField(null=False)
     subject = models.CharField(max_length=100, null=False)
-    númeroTelefonico = models.IntegerField(null=False)
+    numeroTelefonico = models.IntegerField(null=False)
     fechaNacimiento = models.DateField(default = timezone.now)
     materia= models.CharField(max_length=100,null=False)
     created = models.DateTimeField(default = timezone.now)
