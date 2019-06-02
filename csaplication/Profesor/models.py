@@ -2,18 +2,17 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-# Create your models here.
+
 
 class Profesor(models.Model):
-    #user = models.ForeignKey(User, on_delete = models.SET(-1))
-    name = models.CharField(max_length=100, null=False)
-    lastname = models.CharField(max_length=100, null=False)
-    age = models.IntegerField(null=False)
-    gender = models.CharField(max_length=100, null=False) #Genero
+    nombre = models.CharField(max_length=100, null=False)
+    apellido = models.CharField(max_length=100, null=False)
+    edad = models.IntegerField(null=False)
+    sexo = models.CharField(max_length=100, null=False)
     subject = models.CharField(max_length=100, null=False)
-    yearsExperience = models.IntegerField(null=False)
-    phoneNumber = models.IntegerField(null=False)
-    birthday = models.DateField(default = timezone.now)
+    amosExperencia = models.IntegerField(null=False)
+    numeroTelefonico = models.IntegerField(null=False)
+    fechaNacimiento = models.DateField(default = timezone.now)
     delete = models.BooleanField(default = False)
     created = models.DateTimeField(default = timezone.now)
     edited = models.DateTimeField(blank=True, null=True, default=None)

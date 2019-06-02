@@ -9,4 +9,4 @@ from Profesor.models import Profesor
 class ProfesorSerializers(DynamicFieldsMixin,serializers.ModelSerializer):
     class Meta:
         model = Profesor
-        fields = ('id','name','lastname','age','gender','subject','yearsExperience','phoneNumber','birthday')
+        fields = ('id','nombre','apellido','edad','sexo','subject','amosExperencia','numeroTelefonico','fechaNacimiento')
