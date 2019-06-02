@@ -9,4 +9,4 @@ from Estudiante.models import Estudiante
 class EstudianteSerializers(DynamicFieldsMixin,serializers.ModelSerializer):
     class Meta:
         model = Estudiante
-        fields = ('id','name','edad','sexo','subject','dirección','numerotelefónico','fechanacimiento','matrícula')
+        fields = ('id','name','apellido','edad','sexo','subject','direccion','numeroTelefonico','materia','fechaNacimiento','matricula')
