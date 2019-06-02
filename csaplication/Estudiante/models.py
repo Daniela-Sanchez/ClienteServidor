@@ -5,7 +5,6 @@ from django.utils import timezone
 # Create your models here.
 
 class Estudiante(models.Model):
-    #user = models.ForeignKey(User, on_delete = models.SET(-1))
     name = models.CharField(max_length=100, null=False)
     edad = models.IntegerField(null=False)
     sexo = models.CharField(max_length=100, null=False)
