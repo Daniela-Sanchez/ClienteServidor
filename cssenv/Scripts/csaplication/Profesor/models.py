@@ -13,9 +13,7 @@ class Profesor(models.Model):
     amosExperencia = models.IntegerField(null=False)
     numeroTelefonico = models.IntegerField(null=False)
     fechaNacimiento = models.DateField(default = timezone.now)
-    delete = models.BooleanField(default = False)
     created = models.DateTimeField(default = timezone.now)
-    edited = models.DateTimeField(blank=True, null=True, default=None)
 
     def __str__(self):
         return self.name

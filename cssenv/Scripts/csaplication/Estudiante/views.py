@@ -19,7 +19,7 @@ from Estudiante.serializers import EstudianteSerializers
 class EstudianteList(APIView):
     # METODO PARA SOLICITAR LA INFORMACION
     def get(self, request, format=None):
-        queryset = Estudiante.objects.filter(delete = False)
+        queryset = Estudiante.objects.all()   
         serializer = EstudianteSerializers(queryset, many=True, context = {'request': request})
         return Response(serializer.data)
 
@@ -60,6 +60,5 @@ class EstudianteDetail(APIView):
     def delete(self, request, id, format=None):
         estudiante = self.get_object(id)
         estudiante.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-    
+        return Response('Elemento Eliminado')
 

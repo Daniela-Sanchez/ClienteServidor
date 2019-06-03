@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from Profesor.models import Profesor
 
 # Create your models here.
 
@@ -12,7 +13,6 @@ class Estudiante(models.Model):
     sexo = models.CharField(max_length=100, null=False)
     direccion = models.CharField(max_length = 250, null = False) 
     matricula = models.IntegerField(null=False)
-    subject = models.CharField(max_length=100, null=False)
     numeroTelefonico = models.IntegerField(null=False)
     fechaNacimiento = models.DateField(default = timezone.now)
     materia= models.CharField(max_length=100,null=False)

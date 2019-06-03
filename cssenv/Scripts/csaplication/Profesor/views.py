@@ -19,7 +19,7 @@ from Profesor.serializers import ProfesorSerializers
 class ProfesorList(APIView):
     # METODO PARA SOLICITAR LA INFORMACION
     def get(self, request, format=None):
-        queryset = Profesor.objects.filter(delete = False)
+        queryset = Profesor.objects.all()
         serializer = ProfesorSerializers(queryset, many=True, context = {'request': request})
         return Response(serializer.data)
 
@@ -60,6 +60,4 @@ class ProfesorDetail(APIView):
     def delete(self, request, id, format=None):
         profesor = self.get_object(id)
         profesor.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-    
-
+        return Response('Elemento Eliminado')

@@ -8,5 +8,5 @@ from . import views
 
 urlpatterns=[
    re_path(r'^$', views.EstudianteList.as_view()),
-    re_path(r'^(?P<id>\d+)/$',views.EstudianteDetail.as_view()),
+    re_path(r'^detalle/(?P<id>\d+)/$',views.EstudianteDetail.as_view()),
 ]
