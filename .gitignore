@@ -29,3 +29,5 @@ cssenv/Scripts/sqlformat.exe
 cssenv/Scripts/symilar.exe
 cssenv/Scripts/wheel.exe
 cssenv/Scripts/csaplication/package-lock.json
+cssenv/Scripts/csaplication/csaplication/__pycache__/local_settings.cpython-37.pyc
+cssenv/Scripts/gunicorn.exe
